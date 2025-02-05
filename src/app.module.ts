@@ -7,10 +7,13 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { MoviesModule } from './movies/movies.module';
+import { SwapiSyncModule } from './swapi-sync/swapi-sync.module';
 
 @Module({
   imports: [
     UsersModule,
+    MoviesModule,
+    SwapiSyncModule,
     TypeOrmModule.forRoot({
       // database connection
       type: 'mysql',

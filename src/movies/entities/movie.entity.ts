@@ -5,7 +5,7 @@ export class Movie {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   title: string;
 
   @Column()
@@ -14,9 +14,4 @@ export class Movie {
   @Column({ type: 'date' })
   releaseDate: string;
 
-  @Column()
-  gender: string;
-
-  @CreateDateColumn()
-  createdAt: Date;
 }

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { MoviesService } from './movies.service';
 import { MoviesController } from './movies.controller';
 import { Movie } from './entities/movie.entity';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
